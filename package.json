@@ -4,9 +4,11 @@
   "description": "",
   "main": "./src/index.js",
   "dependencies": {
+    "blueimp-md5": "^2.3.1",
     "classnames": "^2.2.5",
     "object.omit": "^2.0.0",
-    "react": "^15.3.1"
+    "react": "^15.3.1",
+    "warning": "^3.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.1",
