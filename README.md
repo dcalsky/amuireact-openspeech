@@ -1,34 +1,46 @@
+
 Amuireact-openspeech
 ====================
 The OpenSpeech component of [讯飞开放平台](http://www.xfyun.cn/) for [Amaze UI React](https://github.com/amazeui/amazeui-react)
 
+## Feature
+According to the speech of user, this component will transform speech into text which is based on the openspeech SDK.
+
+## Live demo
+
+demo: [amazeui-opeenspeech-example](http://demo.noddl.me)
+
+Open the web developer tool while using demo will be better.
+
+## Browser
+
+![safari](https://img.shields.io/badge/safari-%E2%9C%96%EF%B8%8F-red.svg)![firefox](https://img.shields.io/badge/firefox-%E2%9C%94%EF%B8%8F-green.svg)![chrome](https://img.shields.io/badge/chrome-✔️-green.svg)
+
+**!Note**: Whether pass the test on special browser is subject to [the official SDK](http://webapi.openspeech.cn/).
+
 ## Demo & Examples
 
-Live demo: [jedwatson.github.io/react-select](http://jedwatson.github.io/react-select/)
-
-To build the example locally, clone this repo then run:
+To build the example locally, clone this repo and open example folder then run:
 
 ```javascript
+cd example
 npm install
 npm start
 ```
 
-Then open [`localhost:3030`](http://localhost:3030) in a browser.
+Then open [`localhost:3000`](http://localhost:3000) in a browser.
 
 ## Installation
-The easiest way to use amuireact-openspeech is to install it from NPM and include it in your own React build process (using [Browserify](http://browserify.org), etc).
+The easiest way to use amuireact-openspeech is to install it from NPM and include it in your own React build process (using [Webpack](http://webpack.github.io), etc).
 
 ```javascript
-npm install react-select --save
+npm install amuireact-openspeech --save
 ```
 
 At this point you can import amuireact-openspeech in your application as follows:
 
 ```js
 import OpeenSpeech from 'amuireact-openspeech';
-
-// Be sure to include styles at some point, probably during your bootstrapping
-import 'react-select/dist/react-select.css';
 ```
 
 And there are some base libraries you should import.

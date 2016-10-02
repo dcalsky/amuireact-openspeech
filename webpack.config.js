@@ -1,4 +1,3 @@
-var rucksack = require('rucksack-css');
 var webpack = require('webpack');
 var path = require('path');
 
@@ -9,7 +8,7 @@ module.exports = {
     path: path.join(__dirname, './dist'),
     filename: 'amuireact-openspeech.js',
     libraryTarget: 'umd',
-    library: 'React-openspeech'
+    library: 'react-openspeech'
   },
   module: {
     loaders: [
@@ -24,10 +23,7 @@ module.exports = {
         test: /\.css$/,
         exclude: /src/,
         loader: 'style!css'
-      }, /*{
-       test: /\.styl$/,
-       loader: 'style!css!stylus'
-       },*/ {
+      }, {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
@@ -37,19 +33,14 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.jsx']
   },
-  postcss: [
-    rucksack({
-      autoprefixer: true
-    })
-  ],
   externals: {
     react: 'react'
   },
   plugins: [
-    // new webpack.optimize.UglifyJsPlugin({
-    //   compress: {
-    //     warnings: false
-    //   }
-    // })
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })
   ]
 };

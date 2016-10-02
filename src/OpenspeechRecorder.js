@@ -1,6 +1,4 @@
 import React from 'react';
-import warning from 'warning';
-
 /**
  * @class OpenspeechRecorder
  * @props
@@ -10,10 +8,10 @@ const OpenspeechRecorder = React.createClass({
   propTypes: {
     signature: React.PropTypes.string.isRequired,
     username: React.PropTypes.string.isRequired,
-    enable: React.PropTypes.bool, // component state of running
+    enable: React.PropTypes.bool.isRequired, // component state of running
     appid: React.PropTypes.string.isRequired, // your private app id
-    timestamp: React.PropTypes.string, // As same as the time stamp of signature
-    expires: React.PropTypes.number, // As same as the expires of signature
+    timestamp: React.PropTypes.string.isRequired, // As same as the timestamp of signature
+    expires: React.PropTypes.number.isRequired, // As same as the expires of signature
     url: React.PropTypes.string, // Server address
     reconnection: React.PropTypes.bool, // Whether client support reconnection after disconnecting
     resultType: React.PropTypes.string, // Format for result: json or plain
@@ -29,7 +27,6 @@ const OpenspeechRecorder = React.createClass({
   getDefaultProps () {
     return {
       enable: false,
-      timestamp: new Date().toLocaleTimeString(),
       expires: 10000, // A day
       url: 'http://webapi.openspeech.cn/',
       reconnection: true,
@@ -101,7 +98,7 @@ const OpenspeechRecorder = React.createClass({
     this._initSession();
   },
   _getMessage(message) {
-    if (message === 'onEnd' || message === 'onStop') {
+    if (message === 'onEnd') {
       this.setState({enable: false});
     }
     this.props.getCurrentMessage(message)
@@ -112,12 +109,8 @@ const OpenspeechRecorder = React.createClass({
   _handleStopListen() {
     this.state.session.stop();
   },
-  _getControllerElement() {
-
-  },
   render() {
     const {
-      className,
       style
     } = this.props;
 
@@ -125,7 +118,7 @@ const OpenspeechRecorder = React.createClass({
       <div className="am-openspeech-recorder" style={style}>
         {this.props.children}
       </div>
-    )
+    );
   }
 });
 
