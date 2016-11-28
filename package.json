@@ -1,10 +1,14 @@
 {
   "name": "amuireact-openspeech",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The OpenSpeech component of xfyun.cn for Amaze UI React",
   "main": "./index.js",
   "dependencies": {
     "react": "^15.3.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcalsky/amuireact-openspeech.git"
   },
   "devDependencies": {
     "babel-loader": "^6.2.5",

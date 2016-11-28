@@ -6,11 +6,11 @@ The OpenSpeech component of [讯飞开放平台](http://www.xfyun.cn/) for [Amaz
 ## Feature
 According to the speech of user, this component will transform speech into text which is based on the openspeech SDK.
 
-## Live demo
+~~## Live demo~~
 
-demo: [amazeui-opeenspeech-example](http://demo.noddl.me)
+~~demo: [amazeui-opeenspeech-example](http://demo.noddl.me)~~
 
-Open the web developer tool while using demo will be better.
+~~Open the web developer tool while using demo will be better.~~
 
 ## Browser
 
